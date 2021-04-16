@@ -17,7 +17,8 @@ public class AreaController {
     @Autowired
     AreaService areaService;
 
-    @GetMapping("/listArea")
+    @CrossOrigin
+    @GetMapping("/listAreas")
     public ResponseEntity<?> list(){
         List<Area> areas = areaService.list();
         return new ResponseEntity<>(areas, HttpStatus.OK);
